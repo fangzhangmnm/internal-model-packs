@@ -1,0 +1,23 @@
+{
+  "name": "@internal/model-packs",
+  "version": "0.1.0",
+  "description": "PWA 家族模型包的字节层：按宿主内嵌的清单下载（逐片 sha256）/ 用户导入 / 缓存在 Cache Storage pwa-models / 删除 / 取分片。源 = JustReadBooks src/model-packs.ts。",
+  "type": "module",
+  "license": "MIT",
+  "files": ["dist", "src", "README.md"],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "bash scripts/build.sh",
+    "test": "node test/run.mjs",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "release": "bash scripts/release.sh"
+  },
+  "devDependencies": {
+    "typescript": "5.7.3"
+  }
+}
